@@ -21,13 +21,17 @@ function createFeatures(earthquakeData) {
     else if (depth >= 40 && depth < 60) return colors[2];
     else if (depth >= 60) return colors[3];
   }
-  
+
   function onEachFeature(feature, marker) {
+    
+    quakemag = feature.properties.mag
+    quakedepth = feature.geometry.coordinates[2]
+  
     marker = L.circle([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-      color: markerColor(feature.geometry.coordinates[2]),
-      fillColor: markerColor(feature.geometry.coordinates[2]),
-      radius: markerSize(feature.properties.mag)});
-    marker.bindPopup(`<h3>Magnitude: ${feature.properties.mag}<span style="margin-left:40px">Depth: ${feature.geometry.coordinates[2]}km</span></h3><hr><h4>Location: ${feature.properties.place}</h4><hr><p>Time: ${new Date(feature.properties.time)}</p>`).addTo(myMap);
+      color: markerColor(quakedepth),
+      fillColor: markerColor(quakedepth),
+      radius: markerSize(quakemag)});
+    marker.bindPopup(`<h3>Magnitude: ${quakemag}<span style="margin-left:40px">Depth: ${quakedepth}km</span></h3><hr><h4>Location: ${feature.properties.place}</h4><hr><p>Time: ${new Date(feature.properties.time)}</p>`).addTo(myMap);
   }
 
   L.geoJSON(earthquakeData, {
