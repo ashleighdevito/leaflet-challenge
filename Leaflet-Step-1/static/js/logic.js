@@ -3,22 +3,23 @@ center: [35, 66],
 zoom: 4,
 });
 
-L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-      }).addTo(myMap);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(myMap);
 
   // Store our API endpoint as queryUrl.
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+
+var colors = ["#feb24c", "#fc4e2a", "#bd0026", "#49006a"];
 
 function createFeatures(earthquakeData) {
 
   function markerSize(magnitude) {
     return Math.exp(magnitude)*1000;}
   function markerColor(depth) {
-    if (depth < 20) return "#fbb4b9";
-    else if (depth >= 20 && depth < 40) return "#f768a1";
-    else if (depth >= 40 && depth < 60) return "#c51b8a";
-    else if (depth >= 60) return "#7a0177";
+    if (depth < 20) return colors[0];
+    else if (depth >= 20 && depth < 40) return colors[1];
+    else if (depth >= 40 && depth < 60) return colors[2];
+    else if (depth >= 60) return colors[3];
   }
   
   function onEachFeature(feature, marker) {
@@ -45,7 +46,6 @@ var legend = L.control({ position: "bottomright" });
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
   var limits = ["Less than 20km", "From 20 to 40km", "From 40 to 60km", "60km and Greater"];
-  var colors = ["#fbb4b9", "#f768a1", "#c51b8a", "#7a0177"];
   var labels = [];
 
   // Add the minimum and maximum.
