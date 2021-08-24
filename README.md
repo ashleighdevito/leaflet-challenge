@@ -8,4 +8,5 @@ The size of circle is exponentially related to the magnitude of the earthquake, 
 
 A legend on the bottom right of the page describes the scale for depth.
 
+
 ![image](Leaflet-Step-1/images/map_example.PNG?raw=true "Example Map Result")
