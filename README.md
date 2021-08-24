@@ -6,6 +6,6 @@ The data is gathered from the [USGS GEOjson Feed](https://earthquake.usgs.gov/ea
 
 The size of circle is exponentially related to the magnitude of the earthquake, and the color corresponds to the depth where the earthquake begins to rupture.
 
-![image](Leaflet-Step-1/images/map_example.PNG?raw=true "Example Map Result")
-
 A legend on the bottom right of the page describes the scale for depth.
+
+![image](Leaflet-Step-1/images/map_example.PNG?raw=true "Example Map Result")
