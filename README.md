@@ -10,3 +10,10 @@ A legend on the bottom right of the page describes the scale for depth.
 
 
 ![image](Leaflet-Step-1/images/map_example.PNG?raw=true "Example Map Result")
+
+The second portion of this project augments the view to include:
+
+    an additional topographic baselayer
+    tectonic plate boundary locations
+
+The tectonic plate boundary data was gathered from the a [GitHub](https://github.com/fraxen/tectonicplates) with a GEOjson conversion of data originally published in Geochemistry Geophysics Geosystems.
