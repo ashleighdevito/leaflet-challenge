@@ -15,9 +15,9 @@ A legend on the bottom right of the page describes the scale for depth.
 
 ## Step 2
 
-The second portion of this project augments the view to include additional layers including:
+The second portion of this project augments the view to include:
 
-    topographic base
+    topographic basemap
     tectonic plate boundary overlay
 
 The tectonic plate boundary data was gathered from the a [GitHub](https://github.com/fraxen/tectonicplates) with a GEOjson conversion of data originally published in Geochemistry Geophysics Geosystems.
