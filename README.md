@@ -24,4 +24,6 @@ The tectonic plate boundary data was gathered from the a [GitHub](https://github
 
 The control in the upper right corner of the map allows for a toggle between the topographic and street view base layer and the data overlays.  Each of the two data layers can be independently added or removed from the map view.
 
+Popups providing detail for each quake event are active on the Earthquake layer.
+
 ![image](Leaflet-Step-2/images/map_example_second.PNG?raw=true "Example Map Result - Step 2")
