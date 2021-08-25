@@ -72,7 +72,7 @@ function createMap(earthquakes) {
   //promise function to gather tectonic data
   d3.json(tecquery).then(function (data) {
 
-    // Once we get a response, send the data.features object to the createFeaturesTec function.
+    //once we get a response, send the data.features object to the createFeaturesTec function
     createFeaturesTec(data.features)
   });
 
