@@ -19,7 +19,7 @@ function createFeatures(earthquakeData) {
 
   //function to set the markersize correlated to quake magnitude
   function markerSize(magnitude) {
-    return Math.exp(magnitude)*1000;}
+  return (Math.exp(magnitude)*1000);}
 
   //function to set the markercolor correlated to quake depth 
   function markerColor(depth) {
